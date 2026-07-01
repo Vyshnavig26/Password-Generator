@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    		<title>Password Generator Mini Project </title>
+	</head>
+	<body>
+    		<h1>Password Generator</h1>
+    		<form action="display.html" method="GET" id="passwordForm">
+       			<label for ="username">Username:</label>
+        		<input type="text" id="username" name="username" required><br><br>
+        	
+       			<label for="length">Password Length:</label>
+        		<input type="range" id="length" name="length" min="6" max="20" value="12">
+        		<span id="lengthValue">12</span><br><br>
+        
+        		<label><input type="checkbox" name="includeNumbers" value="true"> Include Numbers</label><br>
+        		<label><input type="checkbox" name="includeSymbols" value="true"> Include Symbols</label><br><br>
+			<button type="submit">Generate Password</button>
+    		</form>
+		<script>
+                	const lengthInput = document.getElementById('length');
+        		const lengthValue = document.getElementById('lengthValue');
+        		lengthInput.addEventListener('input', () => {
+            		lengthValue.textContent = lengthInput.value;
+        		});
+    		    </script>
+
+    	</body>
+</html>
+
+
+
